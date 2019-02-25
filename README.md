@@ -6,7 +6,7 @@ Conditions to reproduce:
 * WebGL backend only.
 * Batch image predictions only (the first prediction in each batch is consistently correct).
 
-Instructions:
+**Instructions:**
 
 Must be run on a Chromebook to see prediction discrepancies.
 
@@ -37,10 +37,16 @@ npm run build
 - Click the extensions `background page` link.
 
 - It'll open a report generated against the WebGL backend by default.
-  To open a report generated against the CPU backend, run:
+  To open a report generated against the CPU backend, run the following in the extension's background page console:
 
 ```js
 __useCpuBackend()
+```
+
+- To open a report generated against the WebGL backend, run the following in the extension's background page console:
+
+```js
+__useWebGlBackend()
 ```
 
 On a Chromebook, compare prediction results between the WebGL report and the CPU. For example, I'm getting the following:

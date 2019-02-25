@@ -19,7 +19,7 @@
     "google"
   ],
   "scripts": {
-    "copy": "cp src/imagenet_classes.js dist/src/",
+    "copy": "cp src/content.js dist/src/ && cp src/imagenet_classes.js dist/src/",
     "build": "parcel build src/background.js -d dist/src/ -o background && npm run copy",
     "watch": "npm run copy && parcel watch src/background.js --hmr-hostname localhost -d dist/src/ -o background"
   },
