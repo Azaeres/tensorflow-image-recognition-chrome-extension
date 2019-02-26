@@ -166,7 +166,7 @@ On a Chromebook, compare prediction results between the WebGL report and the CPU
 }
 ```
 
-Note that the CPU report features the predictions we expect, and the WebGL report does not.
+Note that the CPU report features the predictions we expect, and the WebGL report does not. In my tests, the first predictions in the batch actually match correctly, but all other predictions do not. The example above is not the full batch; it's just one item that's been hand-selected from a batch.
 
 ## Original README
 
