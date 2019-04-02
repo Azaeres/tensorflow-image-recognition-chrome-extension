@@ -101,7 +101,7 @@ class BackgroundProcessing {
   async loadModel() {
     console.log('Loading model...');
     const startTime = performance.now();
-    this.model = await tf.loadModel(MOBILENET_MODEL_PATH);
+    this.model = await tf.loadLayersModel(MOBILENET_MODEL_PATH);
     this.model.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
 
     const totalTime = Math.floor(performance.now() - startTime);
@@ -135,7 +135,7 @@ class BackgroundProcessing {
     const logits = tf.tidy(() => {
       const offset = tf.scalar(127.5);
       const batchedArray = imgElements.map(imgElement => {
-        const img = tf.fromPixels(imgElement).toFloat();
+        const img = tf.browser.fromPixels(imgElement).toFloat();
         const normalized = img.sub(offset).div(offset);
         return normalized.reshape([1, IMAGE_SIZE, IMAGE_SIZE, 3]);
       });
