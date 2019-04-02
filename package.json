@@ -24,14 +24,17 @@
     "watch": "npm run copy && parcel watch src/background.js --hmr-hostname localhost -d dist/src/ -o background"
   },
   "author": "Jouni Kontinen <jouni.kontinen___polarspin.com>",
-  "contributors": [{
-    "name": "Jouni Kontinen",
-    "email": "jouni.kontinen___polarspin.com",
-    "url": "https://www.polarspin.com"
-  }, {
-    "name": "Ryan Barry",
-    "email": "rbarry@goguardian.com"
-  }],
+  "contributors": [
+    {
+      "name": "Jouni Kontinen",
+      "email": "jouni.kontinen___polarspin.com",
+      "url": "https://www.polarspin.com"
+    },
+    {
+      "name": "Ryan Barry",
+      "email": "rbarry@goguardian.com"
+    }
+  ],
   "license": "Apache 2.0",
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -41,6 +44,6 @@
     "parcel-bundler": "^1.7.1"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "0.15.0"
+    "@tensorflow/tfjs": "1.0.3"
   }
 }
